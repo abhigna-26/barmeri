@@ -73,46 +73,44 @@ transform: scale(1.1);
     @media (min-width:1024px){ .hero-img { height: 540px; } }
 </style>
 <body class="antialiased text-gray-800 bg-gradient-to-b from-white via-amber-50 to-white">
+<!-- Navbar -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <!-- Logo and Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="mainlogo.jpeg" alt="Barmeri Handicrafts Logo" class="w-10 h-10 object-contain rounded-full">
+      <h1 class="text-2xl font-bold text-amber-900">Barmeri Handicrafts</h1>
+    </div>
 
-  <!-- NAVBAR -->
-  <!-- Navbar -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto flex items-center justify-between p-4">
-      <div class="flex items-center space-x-3">
-        <img src="mainlogo.jpeg" alt="Barmeri Handicrafts Logo" class="w-10 h-10 rounded-full" />
-        <h1 class="text-2xl font-bold text-amber-800">Barmeri Handicrafts</h1>
-      </div>
-      <ul class="hidden md:flex space-x-6 font-medium">
-        <li><a href="#home" class="hover:text-amber-700">Home</a></li>
-        <li><a href="#products" class="hover:text-amber-700">Products</a></li>
-        <li><a href="#gallery" class="hover:text-amber-700">Gallery</a></li>
-        <li><a href="#about" class="hover:text-amber-700">About</a></li>
-        <li><a href="#contact" class="hover:text-amber-700">Contact</a></li>
-      </ul>
-      <button id="menu-toggle" class="md:hidden text-amber-800 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-      </button>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 text-amber-900 font-semibold">
+      <a href="#home" class="hover:text-amber-700 transition">Home</a>
+      <a href="#about" class="hover:text-amber-700 transition">About</a>
+      <a href="#products" class="hover:text-amber-700 transition">Products</a>
+      <a href="#gallery" class="hover:text-amber-700 transition">Gallery</a>
+      <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
     </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-amber-100">
-      <ul class="flex flex-col items-center space-y-4 py-4">
-        <li><a href="#home" class="hover:text-amber-700">Home</a></li>
-        <li><a href="#products" class="hover:text-amber-700">Products</a></li>
-        <li><a href="#gallery" class="hover:text-amber-700">Gallery</a></li>
-        <li><a href="#about" class="hover:text-amber-700">About</a></li>
-        <li><a href="#contact" class="hover:text-amber-700">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-    <!-- Mobile nav -->
-    <div id="mobileNav" class="md:hidden hidden border-t border-gray-100">
-      <div class="px-4 pt-4 pb-6 space-y-2">
-        <a href="#products" class="block">Products</a>
-        <a href="#about" class="block">About</a>
-        <a href="#gallery" class="block">Gallery</a>
-        <a href="#contact" class="block">Contact</a>
-      </div>
-    </div>
-  </header>
+
+    <!-- Hamburger Button -->
+    <button id="menu-btn" class="block md:hidden text-amber-900 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-amber-50">
+    <nav class="flex flex-col items-center space-y-4 py-4 text-amber-900 font-semibold">
+      <a href="#home" class="hover:text-amber-700 transition">Home</a>
+      <a href="#about" class="hover:text-amber-700 transition">About</a>
+      <a href="#products" class="hover:text-amber-700 transition">Products</a>
+      <a href="#gallery" class="hover:text-amber-700 transition">Gallery</a>
+      <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <!-- HERO -->
   <main class="pt-20">
@@ -416,6 +414,19 @@ transform: scale(1.1);
     <img src="logo.jpg" alt="Talentronaut Logo" class="w-full h-full object-contain p-2" />
   </div>
 </a>
+<script>
+    AOS.init();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('animate-slideDown');
+    });
+  </script>
+
+</body>
+</html>
 
   <!-- FOOTER -->
   <footer class="mt-12 border-t bg-white py-8">
