@@ -1,15 +1,4 @@
 <!doctype html>
-<!--
-  Barmerihandicrafts - Single-file responsive e-commerce landing page
-  - TailwindCSS CDN for styling and responsiveness
-  - AOS (Animate On Scroll) for scroll animations
-  - Floating Talentronaut icon linking to https://www.talentronaut.in/
-  - Placeholder for attached logo: /assets/logo.png  <-- replace with your attached image
-  - Images used from Unsplash as examples; replace with your product images when ready
-  - Mobile-friendly, interactive product gallery, hero, about, features, contact form
-  - Modern color palette inspired by Rajasthani vibrance: deep-marigold, indigo, warm-terracotta
--->
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -17,14 +6,11 @@
   <title>Barmeri Handicrafts — Handmade Rajasthani Textiles & Bags</title>
   <meta name="description" content="Barmeri Handicrafts - Handmade Banjara bags, cushions, kantha bedsheets — ethically made by women artisans of Barmer, Rajasthan." />
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS for scroll animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Feather icons -->
   <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
   <style>
@@ -73,16 +59,13 @@ transform: scale(1.1);
     @media (min-width:1024px){ .hero-img { height: 540px; } }
 </style>
 <body class="antialiased text-gray-800 bg-gradient-to-b from-white via-amber-50 to-white">
-<!-- Navbar -->
 <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
   <div class="container mx-auto flex justify-between items-center py-4 px-6">
-    <!-- Logo and Brand -->
     <div class="flex items-center space-x-3">
       <img src="mainlogo.jpeg" alt="Barmeri Handicrafts Logo" class="w-10 h-10 object-contain rounded-full">
       <h1 class="text-2xl font-bold text-amber-900">Barmeri Handicrafts</h1>
     </div>
 
-    <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-8 text-amber-900 font-semibold">
       <a href="#home" class="hover:text-amber-700 transition">Home</a>
       <a href="#about" class="hover:text-amber-700 transition">About</a>
@@ -91,7 +74,6 @@ transform: scale(1.1);
       <a href="#contact" class="hover:text-amber-700 transition">Contact</a>
     </nav>
 
-    <!-- Hamburger Button -->
     <button id="menu-btn" class="block md:hidden text-amber-900 focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -100,7 +82,6 @@ transform: scale(1.1);
     </button>
   </div>
 
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-amber-50">
     <nav class="flex flex-col items-center space-y-4 py-4 text-amber-900 font-semibold">
       <a href="#home" class="hover:text-amber-700 transition">Home</a>
@@ -112,7 +93,6 @@ transform: scale(1.1);
   </div>
 </header>
 
-  <!-- HERO -->
   <main class="pt-20">
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -154,7 +134,6 @@ transform: scale(1.1);
       </div>
     </section>
 
-    <!-- PRODUCTS GRID -->
     <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
       <div class="flex items-center justify-between">
         <h2 class="text-2xl font-bold" data-aos="fade-up">Popular Products</h2>
@@ -163,7 +142,6 @@ transform: scale(1.1);
 
       <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Product Card 1 -->
         <article class="p-4 rounded-xl bg-white shadow-sm" data-aos="zoom-in" data-aos-delay="50">
           <figure class="overflow-hidden rounded-md">
             <img src="bag.png" alt="Banjara bag" class="w-full h-56 object-cover prod-img"/>
@@ -178,7 +156,6 @@ transform: scale(1.1);
           </div>
         </article>
 
-        <!-- Product Card 2 -->
         <article class="p-4 rounded-xl bg-white shadow-sm" data-aos="zoom-in" data-aos-delay="100">
           <figure class="overflow-hidden rounded-md">
             <img src="bedsheet.jpeg" alt="Kantha bedsheet" class="w-full h-56 object-cover prod-img"/>
@@ -193,7 +170,6 @@ transform: scale(1.1);
           </div>
         </article>
 
-        <!-- Product Card 3 -->
         <article class="p-4 rounded-xl bg-white shadow-sm" data-aos="zoom-in" data-aos-delay="150">
           <figure class="overflow-hidden rounded-md">
             <img src="cusion covers.jpg" alt="Cushion covers" class="w-full h-56 object-cover prod-img"/>
@@ -208,7 +184,6 @@ transform: scale(1.1);
           </div>
         </article>
 
-        <!-- More sample products - replicate or replace as needed -->
         <article class="p-4 rounded-xl bg-white shadow-sm" data-aos="zoom-in" data-aos-delay="200">
           <figure class="overflow-hidden rounded-md">
             <img src="toran.webp" alt="toran" class="w-full h-56 object-cover prod-img"/>
@@ -254,7 +229,6 @@ transform: scale(1.1);
       </div>
     </section>
 
-    <!-- ABOUT / STORY -->
     <section id="about" class="bg-gradient-to-r from-amber-50 to-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -286,19 +260,17 @@ transform: scale(1.1);
       </div>
     </section>
 
-   <!-- Gallery Section -->
-<section id="gallery" class="py-20 bg-white" data-aos="fade-up">
+   <section id="gallery" class="py-20 bg-white" data-aos="fade-up">
   <div class="container mx-auto text-center px-6">
     <h2 class="text-3xl font-bold text-amber-900 mb-10">Gallery</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       
-      <!-- Image Card -->
       <div class="relative group overflow-hidden rounded-xl shadow-md">
         <img src="em.jpeg" 
              alt="Banjara Art" 
              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center 
-                    opacity-0 group-hover:opacity-100 transition duration-500">
+                   opacity-0 group-hover:opacity-100 transition duration-500">
           <p class="text-white text-lg font-semibold">Banjara Embroidery</p>
         </div>
       </div>
@@ -308,7 +280,7 @@ transform: scale(1.1);
              alt="Kantha Work" 
              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center 
-                    opacity-0 group-hover:opacity-100 transition duration-500">
+                   opacity-0 group-hover:opacity-100 transition duration-500">
           <p class="text-white text-lg font-semibold">Kantha Work Bedcover</p>
         </div>
       </div>
@@ -318,7 +290,7 @@ transform: scale(1.1);
              alt="Cushion Design" 
              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center 
-                    opacity-0 group-hover:opacity-100 transition duration-500">
+                   opacity-0 group-hover:opacity-100 transition duration-500">
           <p class="text-white text-lg font-semibold">Handcrafted Cushions</p>
         </div>
       </div>
@@ -328,18 +300,16 @@ transform: scale(1.1);
              alt="Torans" 
              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center 
-                    opacity-0 group-hover:opacity-100 transition duration-500">
+                   opacity-0 group-hover:opacity-100 transition duration-500">
           <p class="text-white text-lg font-semibold">Traditional Torans</p>
         </div>
       </div>
 
-      <!-- Add similar image cards for remaining images -->
-    </div>
+      </div>
   </div>
 </section>
 
 
-    <!-- TESTIMONIALS -->
     <section class="bg-white py-12">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h3 class="text-2xl font-bold" data-aos="fade-up">What buyers say</h3>
@@ -362,7 +332,6 @@ transform: scale(1.1);
       </div>
     </section>
 
-    <!-- CONTACT FORM -->
     <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <h3 class="text-2xl font-bold" data-aos="fade-up">Contact & Wholesale Enquiry</h3>
       <p class="text-sm text-gray-600 mt-2">Send us details of your requirement (product, quantity, timeline) and we'll get back with a quote.</p>
@@ -384,7 +353,6 @@ transform: scale(1.1);
       </form>
     </section>
 
-    <!-- QUICK VIEW MODAL -->
     <div id="quickModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
       <div class="bg-white rounded-xl w-11/12 md:w-3/4 lg:w-1/2 p-6 shadow-lg">
         <div class="flex justify-between items-start">
@@ -407,11 +375,9 @@ transform: scale(1.1);
 
   </main>
 
-<!-- FLOATING TALENTRONAUT ICON -->
 <a href="https://www.talentronaut.in/" target="_blank" rel="noopener" class="fixed right-4 bottom-4 z-50" aria-label="Talentronaut" title="Visit Talentronaut">
-  <div class="w-20 h-20 rounded-2xl flex items-center justify-center shadow-2xl border-2 border-white talent-icon overflow-hidden transform transition duration-300 hover:scale-110" style="background:linear-gradient(145deg, #ffcc80, #ff7043);">
-    <!-- Talentronaut Image Logo -->
-    <img src="logo.jpg" alt="Talentronaut Logo" class="w-full h-full object-contain p-2" />
+  <div class="w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl border-2 border-white talent-icon overflow-hidden transform transition duration-300 hover:scale-110" style="background:linear-gradient(145deg, #ffcc80, #ff7043);">
+    <img src="logo (1).png" alt="Talentronaut Logo" class="w-full h-full object-contain p-2" />
   </div>
 </a>
 <script>
@@ -428,7 +394,6 @@ transform: scale(1.1);
 </body>
 </html>
 
-  <!-- FOOTER -->
   <footer class="mt-12 border-t bg-white py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-8">
@@ -475,7 +440,6 @@ transform: scale(1.1);
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
   <script>
     // Init AOS
     AOS.init({ duration: 800, once: true });
@@ -484,7 +448,7 @@ transform: scale(1.1);
     feather.replace();
 
     // Mobile menu toggle
-    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileBtn = document.getElementById('menuBtn');
     const mobileNav = document.getElementById('mobileNav');
     mobileBtn.addEventListener('click', ()=> mobileNav.classList.toggle('hidden'));
 
